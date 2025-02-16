@@ -6,10 +6,13 @@ const Footer = () => {
         <footer className='bg-gray-900 md:px-36 text-left w-full mt-10'>
             <div className='flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 
             md:gap-32 py-10 border-b border-white/30'>
-                <h1>Footer</h1>
+        
                 <div className='flex flex-col md:items-start items-center w-full'>
                     <img src={assets.logo_dark} alt="logo" />
-                    <p className='mt-6 text-center md:text-left text-sm text-white/80'>dao manh tung 123456789daomanhtung</p>
+                    <p className='mt-4 text-center md:text-left text-sm text-white/80'>Phone: 08 1919 8989 </p>
+                    <p className='mt-2 text-center md:text-left text-sm text-white/80'>Email: contact@fullstack.edu.vn</p>
+                    <p className='mt-2 text-center md:text-left text-sm text-white/80'>Address: Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội </p>
+                
                 </div>
                 <div className='flex flex-col md:items-start items-center w-full'>
                     <h2 className='font-semibold text-white mb-5'>Company</h2>
@@ -21,8 +24,9 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='hidden md:flex flex-col items-start w-full'>    
-                    <h2 className='font-semibold text-white mb-5'>Subscribe to our</h2>
-                    <p className='text-sm text-white/80'>dao manh tung dao manh tung dao manh tung</p>
+                    <h2 className='font-semibold text-white mb-5'>Stay Updated
+               </h2>
+                    <p className='text-sm text-white/80'>     Get the latest courses, blockchain certification updates, and learning resources delivered to your inbox.</p>
                     
                     <div className='flex items-center gap-2 pt-4'>
                         <input className='border border-gray-500/30 bg-gray-800 text-gray-500 placeholder-gray-500 outline-none 
@@ -32,7 +36,7 @@ const Footer = () => {
                 </div>
                 
             </div>
-            <p className='py-4 text-center text-xs md:text-sm text-white/60'>@team_nckh</p>
+            <p className='py-4 text-center text-xs md:text-sm text-white/60'>Copyright 2024 © GreatStack. All Right Reserved.</p>
         </footer>
         
     );

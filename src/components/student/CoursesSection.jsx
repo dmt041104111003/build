@@ -9,9 +9,9 @@ const CoursesSection = () => {
     const {allCourses} = useContext(AppContext);
     return (
         <div className='py-16 md:px-40 px-8'>
-            <h1>Courses Section</h1>
-            <h2 className='text-3xl font-medium text-gray-800'>dao manh tung - chuyen nganh ml</h2>
-            <p className='text-sm md:text-base text-gray-500 mt-3'>que quan: ha noi</p>
+            <h2 className='text-3xl font-medium text-gray-800'>Learn & Certify with Confidence
+            </h2>
+            <p className='text-sm md:text-base text-gray-500 mt-3'>Explore our top-rated courses in technology, blockchain, and business. Gain knowledge and earn decentralized certifications on the Cardano blockchain.</p>
             
             <div className='grid grid-cols-auto px-4 md:px-0 md:my-16 my-10 gap-4'>
                 {allCourses.slice(0, 4).map((course, index) => <CourseCard key={index} course={course}/>)}

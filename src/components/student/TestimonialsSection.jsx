@@ -5,9 +5,8 @@ import { assets } from '../../assets/assets';
 const TestimonialsSection = () => {
     return (
         <div className='pb-14 px-8 md:px-0'>
-            <h1>TestimonialsSection</h1>
-            <h2 className='text-3xl font-medium text-gray-800'>Test: DMT CNTT2-k63</h2>
-            <p className='md:text-base text-gray-500 mt-3'>dao manh tung <br />dao manh tung <br />dao manh tung</p>
+            <h2 className='text-3xl font-medium text-gray-800'>Learner Stories</h2>
+            <p className='md:text-base text-gray-500 mt-3'>See how our platform empowers students with knowledge and verifiable blockchain-based certifications on Cardano.</p>
             <div className='grid grid-cols-auto gap-8 mt-14'>
                 {dummyTestimonial.map((testimonial, index) => (
                     <div key={index} className='text-sm text-left border border-gray-500/30 pb-6 rounded-lg bg-white shadow-[0px_4px_15px_0px] shadow-black/5 overflow-hidden'>
