@@ -13,6 +13,7 @@ const Navbar = () => {
     const isCourseListPage = location.pathname.includes('/course-list');
     
     const {openSignIn} = useClerk();
+    
     const {user} = useUser();
     return (
         <div className={`flex items-center justify-between px-5 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 ${isCourseListPage ? 'bg-white' : 'bg-cyan-100/70'}`}>
@@ -25,6 +26,8 @@ const Navbar = () => {
                                 {isEducator ? 'Educator Dashboard' : 'Become Educator'}
                             </button>
                             <Link to='/my-enrollments'>My Enrollments</Link>
+                            
+                            <Link to='/my-enrollments'>My Cerrtificate</Link>
                         </>
                     }
                 </div>
@@ -42,6 +45,7 @@ const Navbar = () => {
                                 {isEducator ? 'Educator Dashboard' : 'Become Educator'}
                             </button>
                             <Link to='/my-enrollments'>My Enrollments</Link>
+                            <Link to='/my-enrollments'>My Cerrtificate</Link>
                         </>
                     }
                     </div>

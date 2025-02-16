@@ -4,11 +4,11 @@ import { assets } from '../../assets/assets';
 const Companies = () => {
     return (
         <div className='pt-16'>
-            <h1>Companies</h1>
-            <p className='text-base text-gray-500'>dao manh tung cntt2-k63</p>
+        
+            <p className='text-base text-gray-500'>Companies and organizations</p>
             <div className='flex flex-wrap justify-center items-center 
             gap-6 md:gap-10 mt-5'>
-                <img src={assets.microsoft_logo} alt="microsoft_logo" 
+                <img src={assets.} alt="cardano_logo" 
                 className='w-20 md:w-28'/>
                 <img src={assets.walmart_logo} alt="walmart_logo" 
                 className='w-20 md:w-28'/>
