@@ -7,6 +7,8 @@ import { assets } from '../../assets/assets';
 import humanizeDuration from 'humanize-duration';
 import Footer from '../../components/student/Footer';
 import YouTube from 'react-youtube';
+import Certificate from '../../components/student/Certificate';
+
 const CourseDetails = () => {
 
     const {id} = useParams();
@@ -34,7 +36,6 @@ const CourseDetails = () => {
     return courseData ? (
         <>
         <div className='flex md:flex-row flex-col-reverse gap-10 relative items-start justify-between md:px-36 px-8 md:pt-30 pt-20 text-left'>
-            <h1>CourseDetails</h1>
             <div className='absolute top-0 left-0 w-full h-section-height bg-gradient-to-b from-cyan-100/70'></div>
 
             <div className='max-w-xl z-10 text-gray-500'>
@@ -57,6 +58,7 @@ const CourseDetails = () => {
             
                 <div className='pt-8 text-gray-800'>
                     <h2 className='text-xl font-semibold'>Course Structure</h2>
+                
                     <div className='pt-5'>
                         {courseData.courseContent.map((chapter,index)=> (
                             <div key={index} className='border border-gray-300 bg-white mb-2 rounded'>
@@ -69,6 +71,7 @@ const CourseDetails = () => {
                                     </div>
                                     <p className='text-sm md:text-default'>{chapter.chapterContent.length} lectures - {calculateChapterTime(chapter)}</p>
                                 </div>
+                                
 
                                 <div className={`overflow-hidden transition-all duration-300 ${openSections[index]?'max-h-96':'max-h-0'}`}>
                                     <ul className='list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-600 border-t border-gray-300'>
@@ -173,8 +176,11 @@ const CourseDetails = () => {
                                     <li>daomanhtung</li>
                                 </ul>
                             </div>
+                    
                 </div>
+                <Certificate/>
             </div>
+            
         </div>
         <Footer/>
         </>

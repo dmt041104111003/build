@@ -42,9 +42,12 @@ import profile_img from './profile_img.png'
 import profile_img2 from './profile_img2.png'
 import profile_img3 from './profile_img3.png'
 import lesson_icon from './lesson_icon.svg'
-
+import ada_cardano_icon from './ada_cardano_icon.svg' 
+import exam_icon from './exam_icon.svg'  
 
 export const assets = {
+    ada_cardano_icon,
+    exam_icon,
     logo,
     search_icon,
     sketch,
@@ -231,6 +234,7 @@ export const dummyCourses = [
                         "lectureDuration": 16,
                         "lectureUrl": "https://youtu.be/CBWnBi-awSA",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -239,6 +243,7 @@ export const dummyCourses = [
                         "lectureDuration": 19,
                         "lectureUrl": "https://youtu.be/4l87c2aeB4I",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
                     }
                 ]
@@ -254,6 +259,7 @@ export const dummyCourses = [
                         "lectureDuration": 20,
                         "lectureUrl": "https://youtu.be/pZQeBJsGoDQ",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -262,7 +268,536 @@ export const dummyCourses = [
                         "lectureDuration": 10,
                         "lectureUrl": "https://youtu.be/ufHT2WEkkC4",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;",
+                            "variable a = 40;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let",
+                            "define"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "Which method is used to convert a string to an integer in JavaScript?",
+                        "options": [
+                            "parseInt()",
+                            "toInteger()",
+                            "stringToInt()",
+                            "convertInt()"
+                        ],
+                        "answer": "parseInt()",
+                        "questionOrder": 3
+                    },
+                    {
+                        "questionId": "question4",
+                        "questionText": "Which symbol is used for single-line comments in JavaScript?",
+                        "options": [
+                            "//",
+                            "/* */",
+                            "#",
+                            "--"
+                        ],
+                        "answer": "//",
+                        "questionOrder": 4
+                    },
+                    {
+                        "questionId": "question5",
+                        "questionText": "How do you declare a constant variable in JavaScript?",
+                        "options": [
+                            "const x = 10;",
+                            "let x = 10;",
+                            "var x = 10;",
+                            "final x = 10;"
+                        ],
+                        "answer": "const x = 10;",
+                        "questionOrder": 5
+                    },
+                    {
+                        "questionId": "question6",
+                        "questionText": "Which function is used to output a message in the console?",
+                        "options": [
+                            "console.log()",
+                            "print()",
+                            "log.console()",
+                            "echo()"
+                        ],
+                        "answer": "console.log()",
+                        "questionOrder": 6
+                    },
+                    {
+                        "questionId": "question7",
+                        "questionText": "Which event occurs when a user clicks on an HTML element?",
+                        "options": [
+                            "onmouseover",
+                            "onchange",
+                            "onclick",
+                            "onload"
+                        ],
+                        "answer": "onclick",
+                        "questionOrder": 7
+                    },
+                    {
+                        "questionId": "question8",
+                        "questionText": "Which method removes the last element from an array in JavaScript?",
+                        "options": [
+                            "pop()",
+                            "shift()",
+                            "removeLast()",
+                            "delete()"
+                        ],
+                        "answer": "pop()",
+                        "questionOrder": 8
+                    },
+                    {
+                        "questionId": "question9",
+                        "questionText": "How do you create an array in JavaScript?",
+                        "options": [
+                            "let arr = []",
+                            "let arr = {}",
+                            "let arr = new Array",
+                            "Both A and C"
+                        ],
+                        "answer": "Both A and C",
+                        "questionOrder": 9
+                    },
+                    {
+                        "questionId": "question10",
+                        "questionText": "Which statement is used to stop the execution of a loop?",
+                        "options": [
+                            "break",
+                            "continue",
+                            "stop",
+                            "exit"
+                        ],
+                        "answer": "break",
+                        "questionOrder": 10
+                    },{
+                        "questionId": "question11",
+                        "questionText": "What is the correct way to create a function in JavaScript?",
+                        "options": [
+                            "function myFunction() {}",
+                            "create myFunction() {}",
+                            "def myFunction() {}",
+                            "function: myFunction() {}"
+                        ],
+                        "answer": "function myFunction() {}",
+                        "questionOrder": 11
+                    },
+                    {
+                        "questionId": "question12",
+                        "questionText": "Which operator is used to assign a value to a variable?",
+                        "options": [
+                            "=",
+                            "==",
+                            "===",
+                            "=>"
+                        ],
+                        "answer": "=",
+                        "questionOrder": 12
+                    },
+                    {
+                        "questionId": "question13",
+                        "questionText": "What is the output of 'typeof NaN' in JavaScript?",
+                        "options": [
+                            "number",
+                            "undefined",
+                            "NaN",
+                            "string"
+                        ],
+                        "answer": "number",
+                        "questionOrder": 13
+                    },
+                    {
+                        "questionId": "question14",
+                        "questionText": "Which method is used to add an element to the end of an array?",
+                        "options": [
+                            "push()",
+                            "add()",
+                            "append()",
+                            "insert()"
+                        ],
+                        "answer": "push()",
+                        "questionOrder": 14
+                    },
+                    {
+                        "questionId": "question15",
+                        "questionText": "How do you check if a variable is an array?",
+                        "options": [
+                            "Array.isArray()",
+                            "isArray()",
+                            "typeof",
+                            "instanceof Array"
+                        ],
+                        "answer": "Array.isArray()",
+                        "questionOrder": 15
+                    },
+                    {
+                        "questionId": "question16",
+                        "questionText": "Which keyword is used to create a class in JavaScript?",
+                        "options": [
+                            "class",
+                            "function",
+                            "object",
+                            "define"
+                        ],
+                        "answer": "class",
+                        "questionOrder": 16
+                    },
+                    {
+                        "questionId": "question17",
+                        "questionText": "What is the correct way to write a conditional statement in JavaScript?",
+                        "options": [
+                            "if (condition) {}",
+                            "if condition {}",
+                            "if {condition}",
+                            "if (condition) then {}"
+                        ],
+                        "answer": "if (condition) {}",
+                        "questionOrder": 17
+                    },
+                    {
+                        "questionId": "question18",
+                        "questionText": "Which method is used to remove the first element from an array?",
+                        "options": [
+                            "shift()",
+                            "pop()",
+                            "removeFirst()",
+                            "delete()"
+                        ],
+                        "answer": "shift()",
+                        "questionOrder": 18
+                    },
+                    {
+                        "questionId": "question19",
+                        "questionText": "What is the output of 'Boolean(0)' in JavaScript?",
+                        "options": [
+                            "true",
+                            "false",
+                            "undefined",
+                            "NaN"
+                        ],
+                        "answer": "false",
+                        "questionOrder": 19
+                    },
+                    {
+                        "questionId": "question20",
+                        "questionText": "Which method is used to convert a string to lowercase?",
+                        "options": [
+                            "toLowerCase()",
+                            "lowercase()",
+                            "toLower()",
+                            "convertToLower()"
+                        ],
+                        "answer": "toLowerCase()",
+                        "questionOrder": 20
+                    },
+                    {
+                        "questionId": "question21",
+                        "questionText": "What is the correct way to create an object in JavaScript?",
+                        "options": [
+                            "let obj = {}",
+                            "let obj = new Object()",
+                            "Both A and B",
+                            "let obj = Object()"
+                        ],
+                        "answer": "Both A and B",
+                        "questionOrder": 21
+                    },
+                    {
+                        "questionId": "question22",
+                        "questionText": "Which method is used to find the length of an array?",
+                        "options": [
+                            "length()",
+                            "size()",
+                            "count()",
+                            "array.length"
+                        ],
+                        "answer": "array.length",
+                        "questionOrder": 22
+                    },
+                    {
+                        "questionId": "question23",
+                        "questionText": "What is the output of 'null == undefined'?",
+                        "options": [
+                            "true",
+                            "false",
+                            "undefined",
+                            "null"
+                        ],
+                        "answer": "true",
+                        "questionOrder": 23
+                    },
+                    {
+                        "questionId": "question24",
+                        "questionText": "Which method is used to join two or more arrays?",
+                        "options": [
+                            "concat()",
+                            "join()",
+                            "merge()",
+                            "combine()"
+                        ],
+                        "answer": "concat()",
+                        "questionOrder": 24
+                    },
+                    {
+                        "questionId": "question25",
+                        "questionText": "What does JSON stand for?",
+                        "options": [
+                            "JavaScript Object Notation",
+                            "JavaScript Online Notation",
+                            "JavaScript Object Name",
+                            "JavaScript Object Notation Syntax"
+                        ],
+                        "answer": "JavaScript Object Notation",
+                        "questionOrder": 25
+                    },
+                    {
+                        "questionId": "question26",
+                        "questionText": "Which operator is used to compare both value and type?",
+                        "options": [
+                            "===",
+                            "==",
+                            "!=",
+                            "!=="
+                        ],
+                        "answer": "===",
+                        "questionOrder": 26
+                    },
+                    {
+                        "questionId": "question27",
+                        "questionText": "What is the purpose of the 'return' statement in a function?",
+                        "options": [
+                            "To exit the function",
+                            "To return a value",
+                            "Both A and B",
+                            "To create a new function"
+                        ],
+                        "answer": "Both A and B",
+                        "questionOrder": 27
+                    },
+                    {
+                        "questionId": "question28",
+                        "questionText": "Which method is used to convert a JSON string into a JavaScript object?",
+                        "options": [
+                            "JSON.parse()",
+                            "JSON.stringify()",
+                            "JSON.convert()",
+                            "JSON.object()"
+                        ],
+                        "answer": "JSON.parse()",
+                        "questionOrder": 28
+                    },
+                    {
+                        "questionId": "question29",
+                        "questionText": "What is the output of 'typeof []' in JavaScript?",
+                        "options": [
+                            "array",
+                            "object",
+                            "undefined",
+                            "string"
+                        ],
+                        "answer": "object",
+                        "questionOrder": 29
+                    },
+                    {
+                        "questionId": "question30",
+                        "questionText": "Which method is used to create a new array with the results of calling a provided function on every element in the calling array?",
+                        "options": [
+                            "map()",
+                            "filter()",
+                            "reduce()",
+                            "forEach()"
+                        ],
+                        "answer": "map()",
+                        "questionOrder": 30
+                    },
+                    {
+                        "questionId": "question31",
+                        "questionText": "What is the correct way to handle errors in JavaScript?",
+                        "options": [
+                            "try...catch",
+                            "error...catch",
+                            "catch...try",
+                            "handle...error"
+                        ],
+                        "answer": "try...catch",
+                        "questionOrder": 31
+                    },
+                    {
+                        "questionId": "question32",
+                        "questionText": "Which method is used to remove an element from a specific index in an array?",
+                        "options": [
+                            "splice()",
+                            "slice()",
+                            "remove()",
+                            "delete()"
+                        ],
+                        "answer": "splice()",
+                        "questionOrder": 32
+                    },
+                    {
+                        "questionId": "question33",
+                        "questionText": "What is the output of '1 + '1'' in JavaScript?",
+                        "options": [
+                            "2",
+                            "'11'",
+                            "undefined",
+                            "NaN"
+                        ],
+                        "answer": "'11'",
+                        "questionOrder": 33
+                    },
+                    {
+                        "questionId": "question34",
+                        "questionText": "Which keyword is used to define a block of code that will be executed if an error occurs?",
+                        "options": [
+                            "catch",
+                            "throw",
+                            "try",
+                            "finally"
+                        ],
+                        "answer": "catch",
+                        "questionOrder": 34
+                    },
+                    {
+                        "questionId": "question35",
+                        "questionText": "What is the purpose of the 'this' keyword in JavaScript?",
+                        "options": [
+                            "It refers to the global object",
+                            "It refers to the current object",
+                            "It refers to the previous object",
+                            "It has no purpose"
+                        ],
+                        "answer": "It refers to the current object",
+                        "questionOrder": 35
+                    },
+                    {
+                        "questionId": "question36",
+                        "questionText": "Which method is used to find the index of the first occurrence of a specified value in an array?",
+                        "options": [
+                            "indexOf()",
+                            "findIndex()",
+                            "search()",
+                            "locate()"
+                        ],
+                        "answer": "indexOf()",
+                        "questionOrder": 36
+                    },
+                    {
+                        "questionId": "question37",
+                        "questionText": "What is the output of 'Boolean(null)' in JavaScript?",
+                        "options": [
+                            "true",
+                            "false",
+                            "undefined",
+                            "NaN"
+                        ],
+                        "answer": "false",
+                        "questionOrder": 37
+                    },
+                    {
+                        "questionId": "question38",
+                        "questionText": "Which method is used to create a new string by replacing some or all matches of a pattern with a replacement?",
+                        "options": [
+                            "replace()",
+                            "replaceAll()",
+                            "substitute()",
+                            "change()"
+                        ],
+                        "answer": "replace()",
+                        "questionOrder": 38
+                    },
+                    {
+                        "questionId": "question39",
+                        "questionText": "What is the output of 'typeof {}' in JavaScript?",
+                        "options": [
+                            "object",
+                            "array",
+                            "null",
+                            "undefined"
+                        ],
+                        "answer": "object",
+                        "questionOrder": 39
+                    },
+                    {
+                        "questionId": "question40",
+                        "questionText": "What is the purpose of the 'let' keyword in JavaScript?",
+                        "options": [
+                            "To declare a variable with block scope",
+                            "To declare a global variable",
+                            "To declare a constant variable",
+                            "To declare a variable with function scope"
+                        ],
+                        "answer": "To declare a variable with block scope",
+                        "questionOrder": 40
+                    }
+                ]
+            },
+            {
+                "testId": "test2",
+                "testTitle": "JavaScript basic",
+                "testDuration": 45,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -304,6 +839,7 @@ export const dummyCourses = [
                         "lectureDuration": 720,
                         "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -312,6 +848,7 @@ export const dummyCourses = [
                         "lectureDuration": 850,
                         "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
                     }
                 ]
@@ -327,6 +864,7 @@ export const dummyCourses = [
                         "lectureDuration": 900,
                         "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
                         "isPreviewFree": true,
+                        "isCompleted": false,
                         "lectureOrder": 1
                     },
                     {
@@ -335,7 +873,50 @@ export const dummyCourses = [
                         "lectureDuration": 950,
                         "lectureUrl": "https://youtu.be/HdLIMoQkXFA",
                         "isPreviewFree": false,
+                        "isCompleted": true,
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -376,6 +957,7 @@ export const dummyCourses = [
                         "lectureDuration": 10,
                         "lectureUrl": "https://youtu.be/samplelink5",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -384,6 +966,7 @@ export const dummyCourses = [
                         "lectureDuration": 18,
                         "lectureUrl": "https://youtu.be/samplelink6",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
                     }
                 ]
@@ -399,6 +982,7 @@ export const dummyCourses = [
                         "lectureDuration": 15,
                         "lectureUrl": "https://youtu.be/samplelink7",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -407,7 +991,50 @@ export const dummyCourses = [
                         "lectureDuration": 20,
                         "lectureUrl": "https://youtu.be/samplelink8",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -442,6 +1069,7 @@ export const dummyCourses = [
                         "lectureDuration": 600,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -450,6 +1078,7 @@ export const dummyCourses = [
                         "lectureDuration": 720,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
                     }
                 ]
@@ -465,6 +1094,7 @@ export const dummyCourses = [
                         "lectureDuration": 800,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -473,7 +1103,50 @@ export const dummyCourses = [
                         "lectureDuration": 850,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -508,6 +1181,7 @@ export const dummyCourses = [
                         "lectureDuration": 600,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -516,6 +1190,7 @@ export const dummyCourses = [
                         "lectureDuration": 720,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
                     }
                 ]
@@ -531,6 +1206,7 @@ export const dummyCourses = [
                         "lectureDuration": 800,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -539,7 +1215,50 @@ export const dummyCourses = [
                         "lectureDuration": 850,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -573,6 +1292,7 @@ export const dummyCourses = [
                         "lectureDuration": 30,
                         "lectureUrl": "https://youtu.be/samplelink1",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -581,6 +1301,7 @@ export const dummyCourses = [
                         "lectureDuration": 25,
                         "lectureUrl": "https://youtu.be/samplelink2",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
                     }
                 ]
@@ -596,6 +1317,7 @@ export const dummyCourses = [
                         "lectureDuration": 20,
                         "lectureUrl": "https://youtu.be/samplelink3",
                         "isPreviewFree": true,
+                        "isCompleted": true,
                         "lectureOrder": 1
                     },
                     {
@@ -604,7 +1326,50 @@ export const dummyCourses = [
                         "lectureDuration": 25,
                         "lectureUrl": "https://youtu.be/samplelink4",
                         "isPreviewFree": false,
+                        "isCompleted": false,
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -646,6 +1411,7 @@ export const dummyCourses = [
                         "lectureDuration": 600,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": false,
                         "lectureOrder": 1
                     },
                     {
@@ -654,6 +1420,8 @@ export const dummyCourses = [
                         "lectureDuration": 720,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
+
                         "lectureOrder": 2
                     }
                 ]
@@ -669,6 +1437,8 @@ export const dummyCourses = [
                         "lectureDuration": 800,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": false,
+
                         "lectureOrder": 1
                     },
                     {
@@ -677,7 +1447,51 @@ export const dummyCourses = [
                         "lectureDuration": 850,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
+
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
@@ -711,6 +1525,8 @@ export const dummyCourses = [
                         "lectureDuration": 700,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": false,
+
                         "lectureOrder": 1
                     },
                     {
@@ -719,6 +1535,8 @@ export const dummyCourses = [
                         "lectureDuration": 750,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
+
                         "lectureOrder": 2
                     }
                 ]
@@ -734,6 +1552,8 @@ export const dummyCourses = [
                         "lectureDuration": 800,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": true,
+                        "isCompleted": false,
+
                         "lectureOrder": 1
                     },
                     {
@@ -742,7 +1562,51 @@ export const dummyCourses = [
                         "lectureDuration": 850,
                         "lectureUrl": "https://youtu.be/-HeadgoqJ7A",
                         "isPreviewFree": false,
+                        "isCompleted": false,
+
                         "lectureOrder": 2
+                    }
+                ]
+            }
+        ],
+        "tests": [
+            {
+                "testId": "test1",
+                "testTitle": "JavaScript Quiz",
+                "testDuration": 15,
+                "questions": [
+                    {
+                        "questionId": "question1",
+                        "questionText": "What is the correct way to declare a variable in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 1
+                    },
+                    {
+                        "questionId": "question2",
+                        "questionText": "Which keyword is used to declare a function in JavaScript?",
+                        "options": [
+                            "function",
+                            "var",
+                            "let"
+                        ],
+                        "answer": "function",
+                        "questionOrder": 2
+                    },
+                    {
+                        "questionId": "question3",
+                        "questionText": "What is the correct way to access the value of a variable outside of a function in JavaScript?",
+                        "options": [
+                            "var x = 10;",
+                            "let y = 20;",
+                            "const z = 30;"
+                        ],
+                        "answer": "var x = 10;",
+                        "questionOrder": 3
                     }
                 ]
             }
