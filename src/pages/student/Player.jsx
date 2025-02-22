@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-
+import Swal from "sweetalert2";
 import { AppContext } from '../../context/AppContext';
 import { useParams } from 'react-router-dom';
 import { assets } from '../../assets/assets';
@@ -16,12 +16,22 @@ const Player = () => {
     const [courseData, setCourseData] = useState(null)
     const [openSections, setOpenSections] = useState({})
     const [playerData, setPlayerData] = useState(null)
-    const [isCompleted, setIsCompleted] = useState(false);
+    
     const navigate = useNavigate();
 
     const handleSetCompleted = () => {
-        setIsCompleted(true);
+        setPlayerData(prev => ({
+            ...prev,
+            isCompleted: true
+        }));
+
+        setCourseData(prev => {
+            const updatedCourse = { ...prev };
+            updatedCourse.courseContent[playerData.chapter - 1].chapterContent[playerData.lecture - 1].isCompleted = true;
+            return updatedCourse;
+        });
     };
+    
     const getCourseData = ()=>{
         enrolledCourses.map((course)=>{
             if(course._id === courseId){
@@ -41,6 +51,21 @@ const Player = () => {
         getCourseData()
     },[enrolledCourses])
 
+    const handleTest =(test)=>{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, start the test!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                navigate(`/player/${courseId}/test/${test.testId}`)
+            }
+        })
+    }
     return (
     <>
         <div className='p-4 sm:[-10 flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:px-36'>
@@ -64,8 +89,9 @@ const Player = () => {
                                     <ul className='list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-600 border-t border-gray-300'>
                                         {chapter.chapterContent.map((lecture, i)=> (
                                             <li className='flex items-start gap-2 py-1' key={i}>
-                                                <img src={lecture.isCompleted ? assets.blue_tick_icon : assets.play_icon} alt="play icon" 
-                                                className='w-4 h-4 mt-1'/>
+                                                
+                                                <img src={lecture.isCompleted ? assets.blue_tick_icon : assets.play_icon} alt="icon" className='w-4 h-4 mt-1'/>
+
                                                
                                                 <div className='flex items-center justify-between w-full text-gray-800 text-xs md:text-default'>
                                                     <p>{lecture.lectureTitle}</p>
@@ -111,7 +137,7 @@ const Player = () => {
                                                     
                                                     <div className='flex gap-2'>
                                                     <p className='text-blue-500 cursor-pointer' 
-                                                        onClick={() => navigate(`/test/${test.testId}`)}
+                                                        onClick={() => handleTest(test)}
                                                     >
                                                         Start Test
                                                     </p>
@@ -145,12 +171,13 @@ const Player = () => {
                                 {playerData.chapter}.{playerData.lecture}.{playerData.lectureTitle}
                             </p>
                             <button
-                                className={`${isCompleted ? "text-gray-500 cursor-not-allowed" : "text-blue-600"}`}
+                                className={`${playerData?.isCompleted ? "text-gray-500 cursor-not-allowed" : "text-blue-600"}`}
                                 onClick={handleSetCompleted}
-                                disabled={isCompleted} 
-                                >
-                                {isCompleted ? "Completed" : "Mark Complete"}
+                                disabled={playerData?.isCompleted} 
+                            >
+                                {playerData?.isCompleted ? "Completed" : "Mark Complete"}
                             </button>
+
 
                         </div>
                     </div>

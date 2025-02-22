@@ -43,7 +43,9 @@ import profile_img2 from './profile_img2.png'
 import profile_img3 from './profile_img3.png'
 import lesson_icon from './lesson_icon.svg'
 import ada_cardano_icon from './ada_cardano_icon.svg' 
-import exam_icon from './exam_icon.svg'  
+import exam_icon from './exam_icon.svg' 
+import next_icon from './next_icon.svg'
+import prev_icon from './prev_icon.svg' 
 
 export const assets = {
     ada_cardano_icon,
@@ -91,7 +93,9 @@ export const assets = {
     profile_img3,
     play_icon,
     blue_tick_icon,
-    lesson_icon
+    lesson_icon,
+    next_icon,
+    prev_icon
 }
 
 export const dummyEducatorData = {

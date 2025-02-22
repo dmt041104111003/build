@@ -3,22 +3,13 @@ import User from "../models/User.js";
 
 export const clerkWebhooks = async (req, res) => {
     try {
-        // eslint-disable-next-line no-undef
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
-<<<<<<< HEAD
-        console.log(process.env.CLERK_WEBHOOK_SECRET);
-        // Verify request từ Clerk (Chú ý: không cần JSON.stringify)
-        const payload = await whook.verify(req.body, {
-=======
         
         await whook.verify(req.body, {
->>>>>>> 3a9f4401c0f6c7dcdfdef05bfe65ea86bc94f353
             "svix-id": req.headers["svix-id"],
             "svix-timestamp": req.headers["svix-timestamp"],
             "svix-signature": req.headers["svix-signature"],
         });
-        console.log("Raw Request Body:", req.body);
-
 
         const { data, type } = req.body;
         switch (type) {
